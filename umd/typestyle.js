@@ -175,7 +175,7 @@ var i=r(6);t.types=i;/**
  * Export certain utilities
  */
 var s=r(1);t.extend=s.extend;t.classes=s.classes;t.media=s.media;/** Zero configuration, default instance of TypeStyle */
-var o=new n.TypeStyle({autoGenerateTag:true});/** Sets the target tag where we write the css on style updates */
+var o=new n.TypeStyle({autoGenerateTag:false});/** Sets the target tag where we write the css on style updates */
 t.setStylesTarget=o.setStylesTarget;/**
  * Insert `raw` CSS as a string. This is useful for e.g.
  * - third party CSS that you are customizing with template strings
