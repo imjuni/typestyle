@@ -3,12 +3,12 @@
 .idea
 
 # Content generated on build
-lib/**/*.js
-lib/**/*.d.ts
-lib.es2015/**/*.js
-lib.es2015/**/*.d.ts
-umd/typestyle.js
-umd/typestyle.min.js
+# lib/**/*.js
+# lib/**/*.d.ts
+# lib.es2015/**/*.js
+# lib.es2015/**/*.d.ts
+# umd/typestyle.js
+# umd/typestyle.min.js
 
 # Logs
 logs
@@ -47,3 +47,6 @@ jspm_packages
 
 # Optional REPL history
 .node_repl_history
+
+# Yarn
+yarn.lock
