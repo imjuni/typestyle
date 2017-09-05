@@ -13,7 +13,7 @@ export { types };
 export { extend, classes, media } from './internal/utilities';
 
 /** Zero configuration, default instance of TypeStyle */
-const ts = new TypeStyle({ autoGenerateTag: true });
+const ts = new TypeStyle({ autoGenerateTag: false });
 
 /** Sets the target tag where we write the css on style updates */
 export const setStylesTarget = ts.setStylesTarget;
