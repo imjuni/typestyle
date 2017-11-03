@@ -148,7 +148,7 @@ var j=function(e){r(t,e);function t(t,r,i){if(i===void 0){i="f"+(++n).toString(3
 function k(t,r){if(t===void 0){t=p}if(r===void 0){r=typeof e!=="undefined"&&e.env["NODE_ENV"]!=="production"}return new j(t,r)}t.create=k}).call(t,r(5))},/* 1 */
 /***/
 function(e,t,r){"use strict";Object.defineProperty(t,"__esModule",{value:true});/** Raf for node + browser */
-t.raf=typeof requestAnimationFrame==="undefined"?setTimeout:requestAnimationFrame.bind(window);/**
+t.raf=typeof requestAnimationFrame==="undefined"?function(e){return setTimeout(e)}:requestAnimationFrame.bind(window);/**
  * Utility to join classes conditionally
  */
 function n(){var e=[];for(var t=0;t<arguments.length;t++){e[t]=arguments[t]}return e.filter(function(e){return!!e}).join(" ")}t.classes=n;/**

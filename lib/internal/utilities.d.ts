@@ -1,6 +1,6 @@
 import * as types from '../types';
 /** Raf for node + browser */
-export declare const raf: any;
+export declare const raf: (cb: () => void) => void;
 /**
  * Utility to join classes conditionally
  */

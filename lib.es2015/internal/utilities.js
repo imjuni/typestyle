@@ -1,5 +1,7 @@
 /** Raf for node + browser */
-export var raf = typeof requestAnimationFrame === 'undefined' ? setTimeout : requestAnimationFrame.bind(window);
+export var raf = typeof requestAnimationFrame === 'undefined'
+    ? function (cb) { return setTimeout(cb); }
+    : requestAnimationFrame.bind(window);
 /**
  * Utility to join classes conditionally
  */

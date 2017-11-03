@@ -674,7 +674,7 @@ export interface CSSProperties {
      * Specifies the mouse cursor displayed when the mouse pointer is over an element.
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/cursor
      */
-    cursor?: CSSGlobalValues | string | 'auto' | 'default' | 'none' | 'context-menu' | 'help' | 'pointer' | 'progress' | 'wait' | 'cell' | 'crosshair' | 'text' | 'vertical-text' | 'alias' | 'copy' | 'move' | 'no-drop' | 'not-allowed' | 'e-resize' | 'n-resize' | 'ne-resize' | 'nw-resize' | 's-resize' | 'se-resize' | 'sw-resize' | 'w-resize' | 'ew-resize' | 'ns-resize' | 'nesw-resize' | 'nwse-resize' | 'col-resize' | 'row-resize' | 'all-scroll' | 'zoom-in' | 'zoom-out' | 'grab' | 'grabbing';
+    cursor?: CSSValue<CSSGlobalValues | string | 'auto' | 'default' | 'none' | 'context-menu' | 'help' | 'pointer' | 'progress' | 'wait' | 'cell' | 'crosshair' | 'text' | 'vertical-text' | 'alias' | 'copy' | 'move' | 'no-drop' | 'not-allowed' | 'e-resize' | 'n-resize' | 'ne-resize' | 'nw-resize' | 's-resize' | 'se-resize' | 'sw-resize' | 'w-resize' | 'ew-resize' | 'ns-resize' | 'nesw-resize' | 'nwse-resize' | 'col-resize' | 'row-resize' | 'all-scroll' | 'zoom-in' | 'zoom-out' | 'grab' | 'grabbing'>;
     /**
      * The direction CSS property specifies the text direction/writing direction. The rtl is used for Hebrew or Arabic text, the ltr is for other languages.
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/direction
@@ -922,6 +922,11 @@ export interface CSSProperties {
      */
     gridRowPosition?: any;
     gridRowSpan?: any;
+    /**
+     * Is a shorthand property for defining grid columns, rows, and areas.
+     * @see https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-areas
+     */
+    gridTemplate?: any;
     /**
      * Specifies named grid areas which are not associated with any particular grid item, but can be referenced from the grid-placement properties. The syntax of the grid-template-areas property also provides a visualization of the structure of the grid, making the overall layout of the grid container easier to understand.
      * @see https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-areas
@@ -1285,7 +1290,7 @@ export interface CSSProperties {
      * The position property controls the type of positioning used by an element within its parent elements. The effect of the position property depends on a lot of factors, for example the position property of parent elements.
      * @see https://developer.mozilla.org/en/docs/Web/CSS/position
      */
-    position?: CSSGlobalValues | 'static' | 'relative' | 'absolute' | 'sticky' | 'fixed';
+    position?: CSSGlobalValues | 'static' | 'relative' | 'absolute' | 'sticky' | '-webkit-sticky' | 'fixed';
     /**
      * Obsolete: unsupported.
      * This property determines whether or not a full-width punctuation mark character should be trimmed if it appears at the beginning of a line, so that its "ink" lines up with the first glyph in the line above and below.
@@ -1738,7 +1743,7 @@ export interface CSSProperties {
      * When elements overlap, z-order determines which one covers the other.
      * @see https://developer.mozilla.org/en/docs/Web/CSS/z-index
      */
-    zIndex?: 'auto' | number;
+    zIndex?: CSSGlobalValues | 'auto' | number;
     /**
      * Sets the initial zoom factor of a document defined by @viewport.
      * @see https://developer.mozilla.org/en/docs/Web/CSS/zoom
